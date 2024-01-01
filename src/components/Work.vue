@@ -56,7 +56,11 @@ onMounted(async () => {
     <div class="h-[56px] text-xl font-semibold leading-[56px] px-4">
       <div class="flex items-center">
         <img src="../assets/image/Trello_loglo.png" alt="" class="h-10 w-10" />
-        <span class="text-white font-semibold pl-2">Notes</span>
+        <span
+          class=" font-semibold pl-2"
+          :class="{ 'text-white': params !== 'undefined' }"
+          >Notes</span
+        >
       </div>
     </div>
     <div class="flex">
