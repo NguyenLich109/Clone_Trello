@@ -39,7 +39,7 @@
           <a-input v-model:value="formState.title" />
         </a-form-item>
         <a-form-item :wrapper-col="{ offset: 0, span: 8 }">
-          <a-button html-type="submit">Submit</a-button>
+          <a-button html-type="submit">Lưu</a-button>
         </a-form-item>
       </a-form>
     </a-modal>
