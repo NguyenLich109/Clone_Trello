@@ -15,13 +15,13 @@
             v-model:value="formState.url"
             class="flex items-center"
           >
-            <a-radio value="image-1.jpg"
+            <a-radio value="/assets/image-1-jXFgRhu0.jpg"
               ><img src="@/assets/image/image-1.jpg" class="h-10 w-10"
             /></a-radio>
-            <a-radio value="image-2.jpg"
+            <a-radio value="/assets/image-2-_ZKBjCzt.jpg"
               ><img src="@/assets/image/image-2.jpg" class="h-10 w-10"
             /></a-radio>
-            <a-radio value="image-3.jpg"
+            <a-radio value="/assets/image-3-tpHVWZxu.jpg"
               ><img src="@/assets/image/image-3.jpg" class="h-10 w-10"
             /></a-radio>
           </a-radio-group>

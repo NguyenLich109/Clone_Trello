@@ -35,7 +35,7 @@
           >
             <span class="flex justify-start items-center">
               <img
-                :src="'src/assets/image/'+value.url"
+                :src="value.url"
                 class="h-8 w-8 rounded-md"
               />
               <p class="text-sm px-2">{{ value.title }}</p>

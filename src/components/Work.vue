@@ -40,10 +40,10 @@ watchEffect(() => {
 onMounted(async () => {
   if (router.currentRoute.value.params.id !== "undefined") {
     const { data } = await GetWork(router.currentRoute.value.params.id);
-   if(!!data){
-    works.value = data;
-    storageWorks.value.push(...data);
-   }
+    if (!!data) {
+      works.value = data;
+      storageWorks.value.push(...data);
+    }
   }
 });
 </script>
@@ -51,7 +51,7 @@ onMounted(async () => {
 <template>
   <div
     class="bg-cover bg-no-repeat bg-center"
-    :style="{ backgroundImage: `url(src/assets/image/${url})` }"
+    :style="{ backgroundImage: `url(${url})` }"
   >
     <div class="h-[56px] text-xl font-semibold leading-[56px] px-4">
       <div class="flex items-center">
