@@ -1,5 +1,7 @@
 <template>
+  <div>
   <div
+  v-if="!toggleSidebar"
     class="min-w-[272px] w-[272px] min-h-[calc(100vh-56px)] bg-stone-200 opacity-[0.94] rounded-tr-lg"
   >
     <div
@@ -13,7 +15,7 @@
         <p class="text-md font-semibold">Không gian làm việc NotePad</p>
         <p class="text-[0.8rem]">Miễn phí</p>
       </div>
-      <span class="cursor-pointer"><AngleVue class="h-4 w-4" /></span>
+      <span @click="handleToggleSidebar" class="cursor-pointer"><AngleVue class="h-4 w-4" /></span>
     </div>
     <div class="pt-2 relative">
       <div class="flex justify-between items-center px-2">
@@ -68,6 +70,10 @@
       </div>
     </div>
   </div>
+  <div v-else @click="handleToggleSidebar" class="p-2 rounded-lg bg-slate-300 mx-2 cursor-pointer fixed">
+    <AngleVue class="h-4 w-4" />
+  </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -98,6 +104,12 @@ const formState = reactive<typeFormCategory>({
 
 const categoryStorage = ref<typeFormCategory[]>([]);
 const loading = ref<boolean>(false);
+const toggleSidebar = ref<boolean>(false)
+
+// bật tắt sidebar
+const handleToggleSidebar = () => {
+  toggleSidebar.value = !toggleSidebar.value
+}
 
 const SubmitModal = async () => {
   if (formState.title !== "" && formState.url !== "") {

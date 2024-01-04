@@ -50,7 +50,7 @@ onMounted(async () => {
 
 <template>
   <div
-    class="bg-cover bg-no-repeat bg-center"
+    class="bg-cover bg-no-repeat bg-center min-h-[100vh]"
     :style="{ backgroundImage: `url(${url})` }"
   >
     <div class="h-[56px] text-xl font-semibold leading-[56px] px-4">
