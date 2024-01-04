@@ -29,8 +29,8 @@
             v-model="note.content"
             rows="3"
             cols="50"
-            class="w-full p-2 rounded-lg border-2 border-transparent focus:border-blue-500 focus:outline-none resize-none"
-            :class="{ 'line-through text-[#ada8a8]': note.isComplete }"
+            class="text-black w-full p-2 rounded-lg border-2 border-transparent focus:border-blue-500 focus:outline-none resize-none"
+            :class="{ 'line-through !text-[#ada8a8]': note.isComplete }"
             @change="handleChangeChildTask(note)"
           ></textarea>
           <Showdown>
@@ -61,7 +61,7 @@
           placeholder="Vui lòng nhập tiêu đề..."
           rows="3"
           cols="50"
-          class="w-full p-2 rounded-lg border-2 border-transparent focus:border-blue-500 focus:outline-none resize-none"
+          class="text-black w-full p-2 rounded-lg border-2 border-transparent focus:border-blue-500 focus:outline-none resize-none"
         ></textarea>
       </div>
       <div class="flex items-center mt-2">

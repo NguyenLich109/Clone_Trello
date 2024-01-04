@@ -12,14 +12,14 @@
         >N</span
       >
       <div class="ml-2">
-        <p class="text-md font-semibold">Không gian làm việc NotePad</p>
-        <p class="text-[0.8rem]">Miễn phí</p>
+        <p class="text-md font-semibold text-black">Không gian làm việc NotePad</p>
+        <p class="text-[0.8rem] text-black">Miễn phí</p>
       </div>
       <span @click="handleToggleSidebar" class="cursor-pointer"><AngleVue class="h-4 w-4" /></span>
     </div>
     <div class="pt-2 relative">
       <div class="flex justify-between items-center px-2">
-        <h1 class="text-sm font-semibold pb-2">Các bảng của bạn</h1>
+        <h1 class="text-sm font-semibold pb-2 text-black">Các bảng của bạn</h1>
         <span class="flex items-center text-xl">
           <MenuVue class="h-4 w-4 cursor-pointer mr-4" />
           <Modal :formState="formState" @SubmitModal="SubmitModal"></Modal>
@@ -40,7 +40,7 @@
                 :src="value.url"
                 class="h-8 w-8 rounded-md"
               />
-              <p class="text-sm px-2">{{ value.title }}</p>
+              <p class="text-sm px-2 text-black">{{ value.title }}</p>
             </span>
             <Showdown>
               <template #shot-title>
